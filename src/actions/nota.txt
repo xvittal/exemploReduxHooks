@@ -1,0 +1,1 @@
+nessa pasta vou tentar separar os reduces do store

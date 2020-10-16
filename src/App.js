@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux'; //=> necessário para fazer o providers funcionar.
+import store from './store';
+import TestesList from './components/TestesList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // qual a diferença de usar esse trecho dentro do App ou dentro do Index que chama o 'root' ??
+    <Provider store={ store }> 
+      <div className="App">
+        <TestesList />
+      </div>
+    </Provider>
   );
 }
-
 export default App;
